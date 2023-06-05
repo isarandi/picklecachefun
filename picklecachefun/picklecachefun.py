@@ -8,7 +8,7 @@ import pickle
 
 from loguru import logger
 
-_default_cache_root = None
+_default_cache_root = os.environ.get('CACHE_DIR')
 
 
 def cache(path, cache_root=None, forced=False, min_time=None):
