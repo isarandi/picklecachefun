@@ -11,7 +11,7 @@ from loguru import logger
 _default_cache_root = None
 
 
-def cache(path, cache_root, forced=False, min_time=None):
+def cache(path, cache_root=None, forced=False, min_time=None):
     """Caches and restores the results of a function call on disk.
     Specifically, it returns a function decorator that makes a function cache its result in a file.
     It only evaluates the function once, to generate the cached file. The decorator also adds a
